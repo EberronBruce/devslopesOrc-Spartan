@@ -10,16 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var msgLabel: UILabel!
+    @IBOutlet weak var leftCharacter: UIImageView!
+    @IBOutlet weak var rightCharacter: UIImageView!
+    @IBOutlet weak var leftAttackBtn: UIButton!
+    @IBOutlet weak var rightAttackBtn: UIButton!
+    
+    var game: Game!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        startGame()
+
+    }
+    
+    func startGame(){
+    
+        game = Game()
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func rightAttackTapped(sender: UIButton) {
+        msgLabel.text = game.attacking("right")
     }
 
-
+    @IBAction func leftAttackTapped(sender: UIButton) {
+        msgLabel.text = game.attacking("left")
+    }
 }
 

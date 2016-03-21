@@ -17,6 +17,9 @@
 		7A5CD3B01C9FF32C005C5721 /* Spartan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CD3AF1C9FF32C005C5721 /* Spartan.swift */; };
 		7A5CD3B21C9FF339005C5721 /* Orc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B11C9FF339005C5721 /* Orc.swift */; };
 		7A5CD3B41CA0045C005C5721 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B31CA0045C005C5721 /* Minecraft.ttf */; };
+		7A5CD3B81CA05A71005C5721 /* sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B61CA05A70005C5721 /* sword.wav */; };
+		7A5CD3B91CA05A71005C5721 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B71CA05A70005C5721 /* death.wav */; };
+		7A5CD3BB1CA06788005C5721 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3BA1CA06788005C5721 /* background.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		7A5CD3AF1C9FF32C005C5721 /* Spartan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spartan.swift; sourceTree = "<group>"; };
 		7A5CD3B11C9FF339005C5721 /* Orc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orc.swift; sourceTree = "<group>"; };
 		7A5CD3B31CA0045C005C5721 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		7A5CD3B61CA05A70005C5721 /* sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sword.wav; sourceTree = "<group>"; };
+		7A5CD3B71CA05A70005C5721 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		7A5CD3BA1CA06788005C5721 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		7A5CD3941C9FC036005C5721 /* rgpoop-exercise */ = {
 			isa = PBXGroup;
 			children = (
+				7A5CD3B51CA05A51005C5721 /* sounds */,
 				7A5CD3B31CA0045C005C5721 /* Minecraft.ttf */,
 				7A5CD3AD1C9FF2E6005C5721 /* Game.swift */,
 				7A5CD3A71C9FEC02005C5721 /* Character.swift */,
@@ -77,6 +84,16 @@
 				7A5CD3A11C9FC036005C5721 /* Info.plist */,
 			);
 			path = "rgpoop-exercise";
+			sourceTree = "<group>";
+		};
+		7A5CD3B51CA05A51005C5721 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7A5CD3BA1CA06788005C5721 /* background.mp3 */,
+				7A5CD3B61CA05A70005C5721 /* sword.wav */,
+				7A5CD3B71CA05A70005C5721 /* death.wav */,
+			);
+			name = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +154,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A5CD3B81CA05A71005C5721 /* sword.wav in Resources */,
+				7A5CD3B91CA05A71005C5721 /* death.wav in Resources */,
 				7A5CD3A01C9FC036005C5721 /* LaunchScreen.storyboard in Resources */,
 				7A5CD39D1C9FC036005C5721 /* Assets.xcassets in Resources */,
 				7A5CD3B41CA0045C005C5721 /* Minecraft.ttf in Resources */,
 				7A5CD39B1C9FC036005C5721 /* Main.storyboard in Resources */,
+				7A5CD3BB1CA06788005C5721 /* background.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

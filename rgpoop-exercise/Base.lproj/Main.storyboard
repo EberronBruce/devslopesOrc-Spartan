@@ -60,6 +60,9 @@
                                     <constraint firstAttribute="height" constant="50" id="oW1-On-XAa"/>
                                 </constraints>
                                 <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="rightAttackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgA-UN-xYU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-rk-4xn" userLabel="LeftAttackBth">
                                 <rect key="frame" x="40" y="283" width="140" height="50"/>
@@ -68,6 +71,9 @@
                                     <constraint firstAttribute="height" constant="50" id="vQe-PT-iUG"/>
                                 </constraints>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="leftAttackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wSg-TM-WK0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-rg-4Jv">
                                 <rect key="frame" x="40" y="290" width="135" height="31"/>
@@ -89,8 +95,12 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Orc attacks Spartan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-d7-ToI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orc attacks Spartan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-d7-ToI">
                                 <rect key="frame" x="99" y="537" width="403" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="LiO-1O-vre"/>
+                                    <constraint firstAttribute="width" constant="403" id="kgQ-wb-iQQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -98,6 +108,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0rV-UG-VZC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcC-d7-ToI" secondAttribute="bottom" constant="20" id="3BZ-kg-A9L"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Z9d-RO-F6E" secondAttribute="bottom" constant="14" id="5qM-0T-BrE"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRQ-dJ-Fm4"/>
                             <constraint firstAttribute="trailing" secondItem="aAo-GM-2El" secondAttribute="trailing" id="F03-eo-VQ7"/>
@@ -112,6 +123,7 @@
                             <constraint firstItem="Xfd-lK-Nhr" firstAttribute="top" secondItem="loy-dB-Pat" secondAttribute="bottom" constant="20" id="boJ-EL-f5M"/>
                             <constraint firstItem="y1n-qc-wUO" firstAttribute="centerY" secondItem="IMR-rk-4xn" secondAttribute="centerY" id="eXr-yF-UrN"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Xfd-lK-Nhr" secondAttribute="bottom" constant="14" id="fBZ-BT-905"/>
+                            <constraint firstItem="bcC-d7-ToI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGr-xh-7Vi"/>
                             <constraint firstItem="WRB-2u-uw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mKU-JK-7l9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WRB-2u-uw2" secondAttribute="bottom" id="meu-27-BHQ"/>
                             <constraint firstItem="Z9d-RO-F6E" firstAttribute="top" secondItem="UsS-rg-4Jv" secondAttribute="bottom" constant="20" id="oP0-H5-5F6"/>
@@ -120,6 +132,13 @@
                             <constraint firstAttribute="trailing" secondItem="y1n-qc-wUO" secondAttribute="trailing" constant="25" id="tcA-id-lbp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftAttackBtn" destination="IMR-rk-4xn" id="8yN-6f-ku7"/>
+                        <outlet property="leftCharacter" destination="Z9d-RO-F6E" id="Zdq-PX-JnO"/>
+                        <outlet property="msgLabel" destination="bcC-d7-ToI" id="YnT-Ax-FlO"/>
+                        <outlet property="rightAttackBtn" destination="y1n-qc-wUO" id="7k8-Gm-HM9"/>
+                        <outlet property="rightCharacter" destination="Xfd-lK-Nhr" id="bNv-cN-rmZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
