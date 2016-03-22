@@ -20,6 +20,7 @@
 		7A5CD3B81CA05A71005C5721 /* sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B61CA05A70005C5721 /* sword.wav */; };
 		7A5CD3B91CA05A71005C5721 /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3B71CA05A70005C5721 /* death.wav */; };
 		7A5CD3BB1CA06788005C5721 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7A5CD3BA1CA06788005C5721 /* background.mp3 */; };
+		7AF45E151CA1D62500283FA2 /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF45E141CA1D62500283FA2 /* Music.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7A5CD3B61CA05A70005C5721 /* sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sword.wav; sourceTree = "<group>"; };
 		7A5CD3B71CA05A70005C5721 /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
 		7A5CD3BA1CA06788005C5721 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		7AF45E141CA1D62500283FA2 /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				7A5CD3B11C9FF339005C5721 /* Orc.swift */,
 				7A5CD3951C9FC036005C5721 /* AppDelegate.swift */,
 				7A5CD3971C9FC036005C5721 /* ViewController.swift */,
+				7AF45E141CA1D62500283FA2 /* Music.swift */,
 				7A5CD3991C9FC036005C5721 /* Main.storyboard */,
 				7A5CD39C1C9FC036005C5721 /* Assets.xcassets */,
 				7A5CD39E1C9FC036005C5721 /* LaunchScreen.storyboard */,
@@ -175,6 +178,7 @@
 				7A5CD3981C9FC036005C5721 /* ViewController.swift in Sources */,
 				7A5CD3B21C9FF339005C5721 /* Orc.swift in Sources */,
 				7A5CD3961C9FC036005C5721 /* AppDelegate.swift in Sources */,
+				7AF45E151CA1D62500283FA2 /* Music.swift in Sources */,
 				7A5CD3AE1C9FF2E6005C5721 /* Game.swift in Sources */,
 				7A5CD3B01C9FF32C005C5721 /* Spartan.swift in Sources */,
 			);
@@ -326,6 +330,7 @@
 				7A5CD3A61C9FC036005C5721 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

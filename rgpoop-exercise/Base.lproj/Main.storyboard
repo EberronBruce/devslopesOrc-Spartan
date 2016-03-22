@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
@@ -108,7 +109,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orc attacks Spartan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-d7-ToI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcC-d7-ToI">
                                 <rect key="frame" x="99" y="537" width="403" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="LiO-1O-vre"/>
@@ -117,7 +118,7 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-cy-o7U">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Character" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-cy-o7U">
                                 <rect key="frame" x="50" y="341" width="500" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="B3a-sT-ge1"/>
@@ -137,27 +138,70 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Vz-LvC" userLabel="rightSpartan">
-                                <rect key="frame" x="490" y="396" width="101" height="105"/>
-                                <state key="normal" image="player">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-g4-Lks" userLabel="rightOrc">
-                                <rect key="frame" x="428" y="396" width="74" height="105"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNm-FT-lBZ" userLabel="leftOrc">
+                                <rect key="frame" x="28" y="396" width="74" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="1o7-0H-OPE"/>
+                                    <constraint firstAttribute="height" constant="105" id="G2k-Z4-WeG"/>
+                                </constraints>
                                 <state key="normal" image="enemy">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="leftOrcTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDD-TA-Hvi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Vz-LvC" userLabel="rightSpartan">
+                                <rect key="frame" x="483" y="387" width="108" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="O2q-kb-OP1"/>
+                                    <constraint firstAttribute="width" constant="108" id="vbu-Ds-7Ws"/>
+                                </constraints>
+                                <state key="normal" image="player">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightSpartanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4cg-QE-prH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq6-gX-ywR" userLabel="leftSpartan">
+                                <rect key="frame" x="123" y="387" width="108" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="6o5-Tx-VhM"/>
+                                    <constraint firstAttribute="width" constant="108" id="xtP-CH-dlQ"/>
+                                </constraints>
+                                <state key="normal" image="player">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftSpartanTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXU-1o-SZQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-g4-Lks" userLabel="rightOrc">
+                                <rect key="frame" x="401" y="396" width="74" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="QrY-H4-UMi"/>
+                                    <constraint firstAttribute="width" constant="74" id="nqX-oD-xEV"/>
+                                </constraints>
+                                <state key="normal" image="enemy">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightOrcTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="841-kB-f2c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0rV-UG-VZC"/>
+                            <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="6Fm-Vz-LvC" secondAttribute="bottom" constant="14" id="2Ii-J8-sc0"/>
                             <constraint firstItem="ltk-V0-pY8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2W9-n7-KTA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcC-d7-ToI" secondAttribute="bottom" constant="20" id="3BZ-kg-A9L"/>
+                            <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="lNm-FT-lBZ" secondAttribute="bottom" constant="14" id="4he-02-e8v"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Z9d-RO-F6E" secondAttribute="bottom" constant="14" id="5qM-0T-BrE"/>
                             <constraint firstItem="a2p-9y-Ulc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AGe-6j-Wp9"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRQ-dJ-Fm4"/>
+                            <constraint firstItem="6Fm-Vz-LvC" firstAttribute="leading" secondItem="nY7-g4-Lks" secondAttribute="trailing" constant="8" id="Dhf-am-K7N"/>
                             <constraint firstAttribute="trailing" secondItem="aAo-GM-2El" secondAttribute="trailing" id="F03-eo-VQ7"/>
                             <constraint firstAttribute="trailing" secondItem="WRB-2u-uw2" secondAttribute="trailing" id="FI7-Cr-EuA"/>
                             <constraint firstAttribute="trailing" secondItem="loy-dB-Pat" secondAttribute="trailing" constant="30" id="HK7-Ag-HbW"/>
@@ -165,14 +209,18 @@
                             <constraint firstItem="WRB-2u-uw2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="KMU-U2-CMt"/>
                             <constraint firstItem="Z9d-RO-F6E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MeE-qN-uZp"/>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="Wl7-cy-o7U" secondAttribute="bottom" constant="104" id="Neb-1y-0cI"/>
+                            <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="lq6-gX-ywR" secondAttribute="bottom" constant="14" id="POq-9I-6QQ"/>
                             <constraint firstItem="UsS-rg-4Jv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="RW2-GJ-cm3"/>
                             <constraint firstAttribute="trailing" secondItem="Xfd-lK-Nhr" secondAttribute="trailing" constant="25" id="S2v-49-2T5"/>
+                            <constraint firstAttribute="trailing" secondItem="6Fm-Vz-LvC" secondAttribute="trailing" constant="9" id="VIv-hY-B2D"/>
                             <constraint firstItem="Xfd-lK-Nhr" firstAttribute="top" secondItem="y1n-qc-wUO" secondAttribute="bottom" constant="8" id="a4O-U6-s5v"/>
                             <constraint firstItem="Xfd-lK-Nhr" firstAttribute="top" secondItem="loy-dB-Pat" secondAttribute="bottom" constant="20" id="boJ-EL-f5M"/>
                             <constraint firstItem="y1n-qc-wUO" firstAttribute="centerY" secondItem="IMR-rk-4xn" secondAttribute="centerY" id="eXr-yF-UrN"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Xfd-lK-Nhr" secondAttribute="bottom" constant="14" id="fBZ-BT-905"/>
+                            <constraint firstItem="lq6-gX-ywR" firstAttribute="leading" secondItem="lNm-FT-lBZ" secondAttribute="trailing" constant="21" id="hej-sa-mLL"/>
                             <constraint firstItem="bcC-d7-ToI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGr-xh-7Vi"/>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="a2p-9y-Ulc" secondAttribute="bottom" constant="64" id="jxX-I0-vlY"/>
+                            <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="nY7-g4-Lks" secondAttribute="bottom" constant="14" id="l8u-li-Iee"/>
                             <constraint firstItem="WRB-2u-uw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mKU-JK-7l9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WRB-2u-uw2" secondAttribute="bottom" id="meu-27-BHQ"/>
                             <constraint firstItem="Z9d-RO-F6E" firstAttribute="top" secondItem="UsS-rg-4Jv" secondAttribute="bottom" constant="20" id="oP0-H5-5F6"/>
@@ -180,18 +228,25 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aAo-GM-2El" secondAttribute="bottom" id="rBA-03-l6z"/>
                             <constraint firstItem="IMR-rk-4xn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="rua-i9-bX8"/>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="ltk-V0-pY8" secondAttribute="bottom" constant="54" id="sGA-4J-ckU"/>
+                            <constraint firstItem="lNm-FT-lBZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="tOy-G3-IcD"/>
                             <constraint firstAttribute="trailing" secondItem="y1n-qc-wUO" secondAttribute="trailing" constant="25" id="tcA-id-lbp"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="leftAttackBtn" destination="IMR-rk-4xn" id="8yN-6f-ku7"/>
+                        <outlet property="leftAttackLabel" destination="UsS-rg-4Jv" id="GRk-Qe-ppa"/>
                         <outlet property="leftCharacter" destination="Z9d-RO-F6E" id="Zdq-PX-JnO"/>
+                        <outlet property="leftOrcBtn" destination="lNm-FT-lBZ" id="dor-LT-jSN"/>
+                        <outlet property="leftSpartanBtn" destination="lq6-gX-ywR" id="oVV-hl-8Pg"/>
                         <outlet property="msgLabel" destination="bcC-d7-ToI" id="YnT-Ax-FlO"/>
                         <outlet property="notifyLbl" destination="Wl7-cy-o7U" id="GHp-1n-9ar"/>
                         <outlet property="restartBtn" destination="ltk-V0-pY8" id="Iiz-H4-mGz"/>
                         <outlet property="restartLabel" destination="a2p-9y-Ulc" id="VjV-kC-MFp"/>
                         <outlet property="rightAttackBtn" destination="y1n-qc-wUO" id="7k8-Gm-HM9"/>
+                        <outlet property="rightAttackLabel" destination="loy-dB-Pat" id="p7w-CI-JWw"/>
                         <outlet property="rightCharacter" destination="Xfd-lK-Nhr" id="bNv-cN-rmZ"/>
+                        <outlet property="rightOrcBtn" destination="nY7-g4-Lks" id="Zkh-4R-mRz"/>
+                        <outlet property="rightSpartanBtn" destination="6Fm-Vz-LvC" id="wd9-oU-S1B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

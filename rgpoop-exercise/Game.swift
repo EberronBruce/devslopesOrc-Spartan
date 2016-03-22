@@ -7,9 +7,13 @@
 //
 
 import Foundation
+import AVFoundation
 
 
 class Game {
+    
+    var attackSound: AVAudioPlayer!
+    var deathSound: AVAudioPlayer!
     
     var leftPlayer: Character!
     var rightPlayer: Character!
@@ -17,10 +21,47 @@ class Game {
     var canAttack = false
     var gameOver = false
     
-    init(){
-        leftPlayer = Orc(name: "Orc", startingHp: 30, attackPwr: 0)
-        rightPlayer = Spartan(name: "Spartan", startingHp: 30, attackPwr: 20)
+    init(leftPlayer: String, rightPlayer: String){
+        
+        setUpSound()
+        
+        
+        if leftPlayer == "Spartan" {
+            self.leftPlayer = Spartan(name: "Left \(leftPlayer)", startingHp: 100, attackPwr: 20)
+        } else if leftPlayer == "Orc" {
+            self.leftPlayer = Orc(name: "Left \(leftPlayer)", startingHp: 100, attackPwr: 0)
+        }
+        
+        if rightPlayer == "Spartan" {
+            self.rightPlayer = Spartan(name: "Right \(rightPlayer)", startingHp: 100, attackPwr: 20)
+        } else if rightPlayer == "Orc" {
+            self.rightPlayer = Orc(name: "Right \(rightPlayer)", startingHp: 100, attackPwr: 0)
+        }
+
         gameOver = false
+    }
+    
+    func setUpSound() {
+        var path = NSBundle.mainBundle().pathForResource("sword", ofType: "wav")
+        var soundURL = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try attackSound = AVAudioPlayer(contentsOfURL: soundURL)
+            attackSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.description)
+        }
+        
+        path = NSBundle.mainBundle().pathForResource("death", ofType: "wav")
+        soundURL = NSURL(fileURLWithPath: path!)
+        
+        do {
+            try deathSound = AVAudioPlayer(contentsOfURL: soundURL)
+            deathSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.description)
+        }
+
     }
     
     func attacking(side: String) -> String {
@@ -30,9 +71,11 @@ class Game {
                 canAttack = false
                 print("\(rightPlayer.name) : \(rightPlayer.hp)")
                 if !alive {
+                    playSound("death")
                     gameOver = true
                     return "\(leftPlayer.name) Wins"
                 } else {
+                    playSound("attack")
                     return "\(leftPlayer.name) Attacks \(rightPlayer.name)"
                 }
                 
@@ -41,9 +84,11 @@ class Game {
                 canAttack = false
                 print("\(leftPlayer.name) : \(leftPlayer.hp)")
                 if !alive {
+                    playSound("death")
                     gameOver = true
                     return "\(rightPlayer.name) Wins"
                 } else {
+                    playSound("attack")
                     return "\(rightPlayer.name) Attacks \(leftPlayer.name)"
                 }
                 
@@ -60,6 +105,21 @@ class Game {
     }
     
 
+    func playSound(sound: String) {
+        if sound == "attack" {
+            if attackSound.playing {
+                attackSound.stop()
+            }
+            
+            attackSound.play()
+        } else if sound == "death" {
+            if deathSound.playing {
+                deathSound.stop()
+            }
+            
+            deathSound.play()
+        }
+    }
     
     
 }
