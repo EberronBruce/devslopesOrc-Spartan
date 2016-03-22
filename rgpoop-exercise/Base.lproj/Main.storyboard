@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Minecraft.ttf">
+            <string>Minecraft</string>
+            <string>Minecraft</string>
             <string>Minecraft</string>
             <string>Minecraft</string>
         </mutableArray>
@@ -39,21 +41,21 @@
                                     <constraint firstAttribute="width" constant="420" id="hwH-uF-kyC"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-lK-Nhr" userLabel="leftplayer">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-lK-Nhr" userLabel="leftplayer">
                                 <rect key="frame" x="388" y="341" width="187" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="187" id="dO1-6A-OdT"/>
                                     <constraint firstAttribute="height" constant="160" id="wIj-2t-Vzf"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-RO-F6E" userLabel="rightplayer">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="Z9d-RO-F6E" userLabel="rightplayer">
                                 <rect key="frame" x="20" y="341" width="187" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="187" id="cme-u8-kwc"/>
                                     <constraint firstAttribute="height" constant="160" id="uA8-3g-FHf"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-qc-wUO" userLabel="RightAttackBtn">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-qc-wUO" userLabel="RightAttackBtn">
                                 <rect key="frame" x="435" y="283" width="140" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="WeW-rz-WhF"/>
@@ -64,7 +66,7 @@
                                     <action selector="rightAttackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OgA-UN-xYU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-rk-4xn" userLabel="LeftAttackBth">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMR-rk-4xn" userLabel="LeftAttackBth">
                                 <rect key="frame" x="40" y="283" width="140" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="59e-Jz-HmN"/>
@@ -75,7 +77,18 @@
                                     <action selector="leftAttackTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wSg-TM-WK0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-rg-4Jv">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltk-V0-pY8" userLabel="restartBtn">
+                                <rect key="frame" x="230" y="396" width="140" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="AMD-RU-AgB"/>
+                                    <constraint firstAttribute="height" constant="50" id="Q1c-9i-DUf"/>
+                                </constraints>
+                                <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XvT-Ia-qs7"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsS-rg-4Jv">
                                 <rect key="frame" x="40" y="290" width="135" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="135" id="RuR-BH-xzZ"/>
@@ -85,7 +98,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loy-dB-Pat">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loy-dB-Pat">
                                 <rect key="frame" x="435" y="290" width="135" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="98c-35-VQu"/>
@@ -104,12 +117,46 @@
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attack!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-cy-o7U">
+                                <rect key="frame" x="50" y="341" width="500" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="B3a-sT-ge1"/>
+                                    <constraint firstAttribute="width" constant="500" id="eOZ-OM-4nD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2p-9y-Ulc" userLabel="restartLabel">
+                                <rect key="frame" x="233" y="405" width="135" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="LPR-RW-UqN"/>
+                                    <constraint firstAttribute="width" constant="135" id="LqJ-ui-YDF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Vz-LvC" userLabel="rightSpartan">
+                                <rect key="frame" x="490" y="396" width="101" height="105"/>
+                                <state key="normal" image="player">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nY7-g4-Lks" userLabel="rightOrc">
+                                <rect key="frame" x="428" y="396" width="74" height="105"/>
+                                <state key="normal" image="enemy">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aAo-GM-2El" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0rV-UG-VZC"/>
+                            <constraint firstItem="ltk-V0-pY8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2W9-n7-KTA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bcC-d7-ToI" secondAttribute="bottom" constant="20" id="3BZ-kg-A9L"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Z9d-RO-F6E" secondAttribute="bottom" constant="14" id="5qM-0T-BrE"/>
+                            <constraint firstItem="a2p-9y-Ulc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AGe-6j-Wp9"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CRQ-dJ-Fm4"/>
                             <constraint firstAttribute="trailing" secondItem="aAo-GM-2El" secondAttribute="trailing" id="F03-eo-VQ7"/>
                             <constraint firstAttribute="trailing" secondItem="WRB-2u-uw2" secondAttribute="trailing" id="FI7-Cr-EuA"/>
@@ -117,6 +164,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="l4X-F9-Ngh" secondAttribute="bottom" id="Jyf-Q1-sSq"/>
                             <constraint firstItem="WRB-2u-uw2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="KMU-U2-CMt"/>
                             <constraint firstItem="Z9d-RO-F6E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="MeE-qN-uZp"/>
+                            <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="Wl7-cy-o7U" secondAttribute="bottom" constant="104" id="Neb-1y-0cI"/>
                             <constraint firstItem="UsS-rg-4Jv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="RW2-GJ-cm3"/>
                             <constraint firstAttribute="trailing" secondItem="Xfd-lK-Nhr" secondAttribute="trailing" constant="25" id="S2v-49-2T5"/>
                             <constraint firstItem="Xfd-lK-Nhr" firstAttribute="top" secondItem="y1n-qc-wUO" secondAttribute="bottom" constant="8" id="a4O-U6-s5v"/>
@@ -124,11 +172,14 @@
                             <constraint firstItem="y1n-qc-wUO" firstAttribute="centerY" secondItem="IMR-rk-4xn" secondAttribute="centerY" id="eXr-yF-UrN"/>
                             <constraint firstItem="l4X-F9-Ngh" firstAttribute="top" secondItem="Xfd-lK-Nhr" secondAttribute="bottom" constant="14" id="fBZ-BT-905"/>
                             <constraint firstItem="bcC-d7-ToI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jGr-xh-7Vi"/>
+                            <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="a2p-9y-Ulc" secondAttribute="bottom" constant="64" id="jxX-I0-vlY"/>
                             <constraint firstItem="WRB-2u-uw2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mKU-JK-7l9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WRB-2u-uw2" secondAttribute="bottom" id="meu-27-BHQ"/>
                             <constraint firstItem="Z9d-RO-F6E" firstAttribute="top" secondItem="UsS-rg-4Jv" secondAttribute="bottom" constant="20" id="oP0-H5-5F6"/>
+                            <constraint firstItem="Wl7-cy-o7U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qt7-Nb-BYy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aAo-GM-2El" secondAttribute="bottom" id="rBA-03-l6z"/>
                             <constraint firstItem="IMR-rk-4xn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="rua-i9-bX8"/>
+                            <constraint firstItem="aAo-GM-2El" firstAttribute="top" secondItem="ltk-V0-pY8" secondAttribute="bottom" constant="54" id="sGA-4J-ckU"/>
                             <constraint firstAttribute="trailing" secondItem="y1n-qc-wUO" secondAttribute="trailing" constant="25" id="tcA-id-lbp"/>
                         </constraints>
                     </view>
@@ -136,6 +187,9 @@
                         <outlet property="leftAttackBtn" destination="IMR-rk-4xn" id="8yN-6f-ku7"/>
                         <outlet property="leftCharacter" destination="Z9d-RO-F6E" id="Zdq-PX-JnO"/>
                         <outlet property="msgLabel" destination="bcC-d7-ToI" id="YnT-Ax-FlO"/>
+                        <outlet property="notifyLbl" destination="Wl7-cy-o7U" id="GHp-1n-9ar"/>
+                        <outlet property="restartBtn" destination="ltk-V0-pY8" id="Iiz-H4-mGz"/>
+                        <outlet property="restartLabel" destination="a2p-9y-Ulc" id="VjV-kC-MFp"/>
                         <outlet property="rightAttackBtn" destination="y1n-qc-wUO" id="7k8-Gm-HM9"/>
                         <outlet property="rightCharacter" destination="Xfd-lK-Nhr" id="bNv-cN-rmZ"/>
                     </connections>

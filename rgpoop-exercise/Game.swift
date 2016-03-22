@@ -14,33 +14,52 @@ class Game {
     var leftPlayer: Character!
     var rightPlayer: Character!
     
+    var canAttack = false
+    var gameOver = false
+    
     init(){
-        leftPlayer = Orc(name: "Orc", startingHp: 200, attackPwr: 0)
-        rightPlayer = Spartan(name: "Spartan", startingHp: 100, attackPwr: 20)
+        leftPlayer = Orc(name: "Orc", startingHp: 30, attackPwr: 0)
+        rightPlayer = Spartan(name: "Spartan", startingHp: 30, attackPwr: 20)
+        gameOver = false
     }
     
     func attacking(side: String) -> String {
-        if side == "left" {
-            rightPlayer.attemptAttack(leftPlayer.attackPwr)
-            checkDeath(rightPlayer)
-            print("\(rightPlayer.name) : \(rightPlayer.hp)")
-            return "\(leftPlayer.name) Attacks \(rightPlayer.name)"
-            
-        } else if side == "right" {
-            leftPlayer.attemptAttack(rightPlayer.attackPwr)
-            checkDeath(leftPlayer)
-            print("\(leftPlayer.name) : \(leftPlayer.hp)")
-            return "\(rightPlayer.name) Attacks \(leftPlayer.name)"
-
-        } else {
-            return "We have an error, who is attacking"
+        if canAttack {
+            if side == "left" {
+                let alive = rightPlayer.attemptAttack(leftPlayer.attackPwr)
+                canAttack = false
+                print("\(rightPlayer.name) : \(rightPlayer.hp)")
+                if !alive {
+                    gameOver = true
+                    return "\(leftPlayer.name) Wins"
+                } else {
+                    return "\(leftPlayer.name) Attacks \(rightPlayer.name)"
+                }
+                
+            } else if side == "right" {
+                let alive = leftPlayer.attemptAttack(rightPlayer.attackPwr)
+                canAttack = false
+                print("\(leftPlayer.name) : \(leftPlayer.hp)")
+                if !alive {
+                    gameOver = true
+                    return "\(rightPlayer.name) Wins"
+                } else {
+                    return "\(rightPlayer.name) Attacks \(leftPlayer.name)"
+                }
+                
+            } else {
+                return "We have an error, who is attacking"
+            }
         }
+        
+        return "Cannot Attack Now"
     }
     
-    func checkDeath(player: Character){
-        if !player.isAlive {
-            print("\(player.name) is dead")
-        }
+    func enableAttack() {
+        canAttack = true
     }
+    
+
+    
     
 }
