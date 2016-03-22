@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7A5CD3911C9FC036005C5721"
-               BuildableName = "rgpoop-exercise.app"
-               BlueprintName = "rgpoop-exercise"
-               ReferencedContainer = "container:rgpoop-exercise.xcodeproj">
+               BuildableName = "Orc&amp;Spartan.app"
+               BlueprintName = "Orc&amp;Spartan"
+               ReferencedContainer = "container:Orc&amp;Spartan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A5CD3911C9FC036005C5721"
-            BuildableName = "rgpoop-exercise.app"
-            BlueprintName = "rgpoop-exercise"
-            ReferencedContainer = "container:rgpoop-exercise.xcodeproj">
+            BuildableName = "Orc&amp;Spartan.app"
+            BlueprintName = "Orc&amp;Spartan"
+            ReferencedContainer = "container:Orc&amp;Spartan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A5CD3911C9FC036005C5721"
-            BuildableName = "rgpoop-exercise.app"
-            BlueprintName = "rgpoop-exercise"
-            ReferencedContainer = "container:rgpoop-exercise.xcodeproj">
+            BuildableName = "Orc&amp;Spartan.app"
+            BlueprintName = "Orc&amp;Spartan"
+            ReferencedContainer = "container:Orc&amp;Spartan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7A5CD3911C9FC036005C5721"
-            BuildableName = "rgpoop-exercise.app"
-            BlueprintName = "rgpoop-exercise"
-            ReferencedContainer = "container:rgpoop-exercise.xcodeproj">
+            BuildableName = "Orc&amp;Spartan.app"
+            BlueprintName = "Orc&amp;Spartan"
+            ReferencedContainer = "container:Orc&amp;Spartan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

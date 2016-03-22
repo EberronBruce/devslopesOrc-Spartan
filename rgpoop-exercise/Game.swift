@@ -110,8 +110,9 @@ class Game {
             if attackSound.playing {
                 attackSound.stop()
             }
-            
+            print("attack sound")
             attackSound.play()
+            
         } else if sound == "death" {
             if deathSound.playing {
                 deathSound.stop()
